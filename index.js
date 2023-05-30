@@ -14,7 +14,7 @@ require("dotenv").config();
 
 // WE SHOULD USE ANY PORT BUT 3000, BECAUSE ITS DEFAULD REACT APP
 // (and in package.json of frontend we should add "proxy": "http://localhost:5000",)
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 // MongoDB connection
 const mongoose = require("mongoose");
