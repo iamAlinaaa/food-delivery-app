@@ -62,8 +62,7 @@ app.post("/cart", async (req, res) => {
 app.post("/history", async (req, res) => {
   try {
     const findOrder = await OrderModel.find({
-      userEmail: req.body.userEmail,
-      userPhone: req.body.userPhone,
+      userEmail: req.body.userEmail
     }).exec();
     res.json(findOrder);
   } catch (err) {
